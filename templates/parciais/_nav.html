@@ -1,0 +1,40 @@
+
+<!--_nav.html-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'index' %}">Blog do Eduard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% for cat in categoriesIni %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'post_categoria' cat.nome_cat %}">{{ cat.nome_cat }}</a>                        
+                    </li>
+                {% endfor %}
+                <!--    IMPRIMIR OPÇOES NO MENU ADICIONAL-->
+                {% if categoriesFim %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mais Categorias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for cat in categoriesFim %}
+                            <a class="dropdown-item" href="{% url 'post_categoria' cat.nome_cat %}">{{ cat.nome_cat }}</a>
+                        {% endfor %}
+                        </div>
+                    </li>
+                {% endif %}                
+            </ul>
+            
+            <form class="form-inline my-2 my-lg-0 ml-lg-4" action="{% url 'post_busca' %}">
+                <input name="termo" value="{{ request.GET.termo }}" class="form-control mr-sm-2" type="search" placeholder="Pesquisar"
+                    aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+<!--/_nav.html-->
