@@ -1,9 +1,9 @@
-Python Django - Blog
-Description
+#Python Django - Blog
+##Description
     - Blog developed with Django
     - uses MySQL database
     
-Run Project:
+##Run Project:
 - create venv inside project dir
     python -m venv venv
 - activate venv
@@ -15,4 +15,6 @@ Run Project:
 - install requirements
     pip install -r requirements.txt
 - initiate server
-    python manage.py
+    python manage.py runserver
+	or
+    python manage.py runserver 0.0.0.0:3000
