@@ -1,0 +1,46 @@
+STEPS TO FOLLOW TO CREATE DJANGO PROJECT ON VSCODE
+
+INSTALL
+    pip install django
+    pip install pillow
+    pip install django-summernote
+    pip install mysqlclient
+
+SELECT PYTHON INTERPRETER
+    CTRL + SHIFT + P
+    type "python interpreter"
+    select "python x.x.x venv:venv"
+
+START DJANGO PROJECT
+    django-admin startproject blog .
+
+CREATE APPS FOR THE WEBSITE
+    python manage.py startapp categorias
+    python manage.py startapp posts
+    python manage.py startapp comentarios
+
+CRIAR BASE DE DADOS MYSQL
+    criar novo schema
+    charset/collation é utf8mb4/general_ci
+
+CONFIGURAR DB MYSQL
+    ver no arquivo prj/settings.py
+
+CONFIGURAR ARQUIVOS ESTATICOS
+    ver no arquivo prj/settings.py
+
+CRIAR USUARIO PARA AREA ADMINISTRATIVA
+    python mange.py createsuperuser
+        eduard
+        123456
+    senha outros usuarios
+        asdf456780
+
+ALTERAR AREA ADMINISTRATIVA
+    dentro de templates na raiz
+        pasta admin arquivo base_site.html
+            editar para trocar o nome que aparece no site
+    dentro de templates/static nas pastas css e img
+        na img --> trocar imagem se preciso com nome logo.png 
+        na css --> trocar as cores
+    after changes collect static
