@@ -25,7 +25,7 @@
   - python3 manage.py migrate
 
 ## Configure admin portal access
-  - ToDo
+  - python3 manage.py createsuperuser
 
 ## Run Project:  
   - initiate server
