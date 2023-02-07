@@ -20,11 +20,12 @@
 
 ## Prepare Database
   - Install MySQL
-  - configure /blog/settings.py with:
+  - configure /blog/local_settings.py AND /blog/settings.py with:
     db name, host, port, user, password  
 
   - python3 manage.py makemigrations blog
-  
+
+## Configure admin portal access
 
 ## Run Project:  
   - initiate server

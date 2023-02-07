@@ -1,16 +1,17 @@
 # local settings:
 
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog',
-        'HOST': '127.0.0.1',
+        'NAME': 'BlogDB',
+        'HOST': 'blogdb.catsifludzz0.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
-        'USER': 'localDjangoAdmin',
-        'PASSWORD': 'L0c@l17Dj@IdD&s01',
+        'USER': 'DjangoSQLUser',
+        'PASSWORD': 'Djang017Passw',
     }
 }
 
