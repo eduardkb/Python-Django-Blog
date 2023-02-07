@@ -1,10 +1,10 @@
-#Python Django - Blog
+# Python Django - Blog
 
-##Description
+## Description
     - Blog developed with Django
     - uses MySQL database
-    
-##Run Project:
+
+## Prepare Project
   - create venv inside project dir
     python -m venv venv
   - activate venv
@@ -17,6 +17,16 @@
     sudo apt-get install default-libmysqlclient-dev	
   - install requirements
     pip install -r requirements.txt
+
+## Prepare Database
+  - Install MySQL
+  - configure /blog/settings.py with:
+    db name, host, port, user, password  
+
+  - python3 manage.py makemigrations blog
+  
+
+## Run Project:  
   - initiate server
     python manage.py runserver
 	or
