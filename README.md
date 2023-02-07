@@ -13,6 +13,8 @@
     Linux:
         source venv/bin/activate
         deactivate (to deactivate)
+  - LINUX - install sql libraries
+    sudo apt-get install default-libmysqlclient-dev	
   - install requirements
     pip install -r requirements.txt
   - initiate server
